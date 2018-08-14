@@ -23,16 +23,19 @@ describe 'Blackjac Score' do
 
   it 'facecards have values calculated correctly' do
 
-    hand = [2, "King"]
-
-    score = blackjack_score(hand)
-
-    expect( score ).must_equal 12
+    # hand = ["Jack", "Queen", "King"]
+    #
+    # score = blackjack_score(hand)
+    #
+    # expect ( score ).must_equal 30
+    expect(blackjack_score(["Jack", 2])).must_equal 12
+    expect(blackjack_score(["Queen", 2])).must_equal 12
+    expect(blackjack_score(["King", 2])).must_equal 12
 
   end
 
   it 'calculates aces as 11 where it does not go over 21' do
-
+    
   end
 
   it 'calculates aces as 1, if an 11 would cause the score to go over 21' do
