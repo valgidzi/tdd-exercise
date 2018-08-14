@@ -18,10 +18,16 @@ describe 'Blackjac Score' do
     score = blackjack_score(hand)
 
     # Assert <-  You do this part!
-
+    expect( score ).must_equal 7
   end
 
   it 'facecards have values calculated correctly' do
+
+    hand = [2, "King"]
+
+    score = blackjack_score(hand)
+
+    expect( score ).must_equal 12
 
   end
 
