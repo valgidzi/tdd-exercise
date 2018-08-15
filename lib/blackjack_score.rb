@@ -1,6 +1,6 @@
 # blackjack_score.rb
 
-VALID_CARDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'King', 'Queen', 'Jack']
+VALID_CARDS = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace']
 
 def blackjack_score(hand)
   if hand.include? ('Jack')
@@ -17,6 +17,23 @@ def blackjack_score(hand)
   end
   # "Queen" == 10
   # "Jack" == 10
-  hand.sum#reduce (:+)
-  
+  #score = hand.sum#reduce (:+)
+
+  if hand.include? ('Ace')
+    hand.delete('Ace')
+    # score = hand.sum
+
+    if hand.sum <= 10
+      hand << 11
+    else
+      hand << 1
+    end
+
+
+  end
+
+  score = hand.sum
+
+  return score
+
 end

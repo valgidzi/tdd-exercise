@@ -35,18 +35,33 @@ describe 'Blackjac Score' do
   end
 
   it 'calculates aces as 11 where it does not go over 21' do
-    
+
+    hand = [3, 7, 'Ace']
+
+    score = blackjack_score(hand)
+
+    expect( score ).must_equal 21
+
   end
 
   it 'calculates aces as 1, if an 11 would cause the score to go over 21' do
+
+    hand = [3, 8, 'Ace']
+
+    score = blackjack_score(hand)
+
+    expect( score ).must_equal 12
 
   end
 
   it 'raises an ArgumentError for invalid cards' do
 
-  end
+# unless valid cards include?
+  # unless 
+  # end
 
   it 'raises an ArgumentError for scores over 21' do
+
 
   end
 end
