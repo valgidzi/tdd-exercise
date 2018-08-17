@@ -3,6 +3,13 @@
 VALID_CARDS = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King', 'Ace']
 
 def blackjack_score(hand)
+  hand.each do |card|
+
+    unless VALID_CARDS.include? (card)
+      raise ArgumentError.new("Not a valid card")
+    end
+
+  end
   if hand.include? ('Jack')
     hand << 10
     hand.delete('Jack')

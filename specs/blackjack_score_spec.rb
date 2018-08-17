@@ -57,8 +57,15 @@ describe 'Blackjac Score' do
   it 'raises an ArgumentError for invalid cards' do
 
 # unless valid cards include?
-  # unless 
-  # end
+    # hand = [2, 11]
+    #
+    # score = blackjack_score(hand)
+    #
+    # expect { blackjack_score(hand) }.must_raise ArgumentError, "Not a valid card"
+    hand = [2, 11]
+
+    expect {blackjack_score(hand)}.must_raise ArgumentError
+  end
 
   it 'raises an ArgumentError for scores over 21' do
 
