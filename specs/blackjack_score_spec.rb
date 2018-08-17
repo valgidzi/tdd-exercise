@@ -69,6 +69,9 @@ describe 'Blackjac Score' do
 
   it 'raises an ArgumentError for scores over 21' do
 
+    hand = [10, 10, 10]
+
+    expect {blackjack_score(hand)}.must_raise ArgumentError
 
   end
 end
